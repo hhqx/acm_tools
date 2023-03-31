@@ -1,4 +1,4 @@
-from acm_tools import dprint, load_test_str, input, print, print_std
+from .acm_tools import dprint, load_test_str, input, print, print_std
 from rich.console import Console
 from rich.style import Style
 from rich.syntax import Syntax

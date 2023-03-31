@@ -8,7 +8,7 @@
 
 - pip install
     ```shell
-    pip install git+https://github.com/hhqx/acm_tools.git
+    pip install git+git@github.com:hhqx/acm_tools.git
     # or
     git clone git@github.com:hhqx/acm_tools.git
     cd acm_tools && python setup.py install

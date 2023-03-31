@@ -32,7 +32,7 @@ def compare_outputs_old(output, target):
     return " ".join(diff_output), " ".join(diff_target)
 
 
-from show_string_difference import get_string_difference, add_color
+from .show_string_difference import get_string_difference, add_color
 
 
 def compare_outputs(output, target):

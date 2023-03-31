@@ -5,8 +5,8 @@ from builtins import input as input_std
 from collections import deque
 import io
 
-from rich_tools import display_diff_table
-from re_sub_test import sub_string_by_list
+from .rich_tools import display_diff_table
+from .re_sub_test import sub_string_by_list
 
 __all__ = ['input', 'print', 'load_test_str', 'dprint', 'print_std']
 
@@ -19,6 +19,10 @@ io_std = io.StringIO()
 io_debug = io.StringIO()
 
 Test_Case = deque()
+
+
+def load_stdin(stdin):
+    str_in.extend([row for row in stdin.split('\n') if row])
 
 
 def load_test_str(test_str: str):
@@ -57,11 +61,6 @@ def pop_new_case():
 
 def exist_case():
     return len(Test_Case) != 0
-
-
-def load_stdin(stdin):
-    if '\n' in stdin:
-        str_in.extend([row for row in stdin.split('\n') if row])
 
 
 def input(*args, **kwargs):
