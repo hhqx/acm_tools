@@ -8,7 +8,7 @@
 
 - pip install
     ```shell
-    pip install git+git@github.com:hhqx/acm_tools.git
+    pip install git+https://github.com/hhqx/acm_tools.git
     # or
     git clone git@github.com:hhqx/acm_tools.git
     cd acm_tools && python setup.py install
@@ -21,7 +21,7 @@
     ![img.png](src/img.png)
 
 ## Recent Changes
-
+- 2023年4月1日23:29:27, add validator.
 - 2023年3月31日22:33:26, initial commit.
   
 
