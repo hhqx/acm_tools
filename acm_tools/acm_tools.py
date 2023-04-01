@@ -30,8 +30,8 @@ def load_test_str(test_str: str):
     # 批量替换 test_str 中的字符
     test_str = sub_string_by_list(
         test_str,
-        ["输入:", "输入：", "输出:", "输出：", ],
-        ["Input:", "Input:", "Output:", "Output:", ]
+        ["样例输入", "样例输出", "输入:", "输入：", "输出:", "输出：", ],
+        ["Input:", "Output:", "Input:", "Input:", "Output:", "Output:", ]
     )
     # 定义正则表达式
     pattern = r'^Input:([\s\S]*?)Output:([\s\S]*?)(\Z|(?=Input)|(?=#))'
