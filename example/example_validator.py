@@ -59,15 +59,15 @@ for iter in range(100):
     func([random.random() for _ in range(random.randint(1, 100))])
 
 # read input and print results
-# import traceback
-# while True:
-#     try:
-#         main()
-#     except Exception as e:
-#         # 处理异常的代码块
-#         traceback.print_exc()
-#         # if isinstance(e, AssertionError):
-#         #     traceback.print_exc()
-#         break
+import traceback
+while True:
+    try:
+        main()
+    except Exception as e:
+        # 处理异常的代码块
+        # traceback.print_exc()
+        # if isinstance(e, AssertionError):
+        #     traceback.print_exc()
+        break
 
 #### END ####

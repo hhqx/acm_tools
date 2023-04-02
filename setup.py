@@ -14,8 +14,8 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/hhqx/acm_tools',
-    project_urls = {
-        "Bug Tracker": "https://github.com/mike-huls/acm_tools/issues"
+    project_urls={
+        "Bug Tracker": "https://github.com/hhqx/acm_tools/issues"
     },
     license='MIT',
     packages=['acm_tools'],
