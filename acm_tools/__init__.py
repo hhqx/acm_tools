@@ -1,8 +1,5 @@
 
 from .acm_tools import *
-from bisect import *
-from collections import *
-from math import *
-from functools import *
-from itertools import *
-from heapq import *
+
+# 导入标准库, 和自定义的包
+from .load_packages import *
