@@ -5,9 +5,12 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
+with open("requirements.txt", "r") as f:
+    requirements = f.readlines()
+
 setuptools.setup(
     name='acm_tools',
-    version='1.0.1',
+    version='1.0.2',
     author='hhqx',
     author_email='weiwushaonian@foxmail.com',
     description='This is a package help you to run algorithm problems with acm in/out format in local python IDE .',
@@ -19,7 +22,7 @@ setuptools.setup(
     },
     license='MIT',
     packages=['acm_tools'],
-    install_requires=['rich', 'typing'],
+    install_requires=requirements,
 )
 
 

@@ -1,3 +1,4 @@
+import sys
 from itertools import zip_longest
 
 from rich.color import Color
@@ -46,7 +47,7 @@ def display_diff_table(debug_infos, outputs, targets, title=None, caption=None, 
     """
     使用Rich模块生成n*3的表格，并将输出结果和目标结果中的不同的单词用不同颜色标出
     """
-    console = Console()
+    console = Console(color_system='windows') if sys.platform.startswith('win') else Console()
     if not title:
         table = Table(show_header=True, header_style="bold magenta")
     else:
@@ -63,7 +64,7 @@ def display_diff_table(debug_infos, outputs, targets, title=None, caption=None, 
     table.add_column("Output")
     table.add_column("Target")
     same_cnt = 0
-    total_row = max(map(len, [outputs, targets]))
+    total_row = max(map(len, [debug_infos, outputs, targets]))
     for debug_info, output, target in zip_longest(debug_infos, outputs, targets, fillvalue=""):
         diff_output, diff_target, is_same = compare_outputs(output, target)
         table.add_row(debug_info, diff_output, diff_target)

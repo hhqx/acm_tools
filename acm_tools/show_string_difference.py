@@ -45,6 +45,7 @@ def get_string_difference(string1, string2):
                 text2.append(add_color(word, colors[4]))
 
     # text1, text2 = reduce(lambda x, y: x+" "+y, text1), reduce(lambda x, y: x+" "+y, text2)
+    text1, text2 = map(lambda x: x if len(x) else [""], [text1, text2])
     text1, text2 = map(lambda text: reduce(lambda x, y: x + " " + y, text), [text1, text2])
     return text1, text2, is_same
 

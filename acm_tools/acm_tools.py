@@ -1,6 +1,6 @@
 import re
 from builtins import print as print_std
-# from builtins import print as print_debug
+from builtins import print as sprint
 from builtins import input as input_std
 from collections import deque
 import io
@@ -8,7 +8,7 @@ import io
 from .rich_tools import display_diff_table
 from .re_sub_test import sub_string_by_list
 
-__all__ = ['input', 'print', 'load_test_str', 'dprint', 'print_std']
+__all__ = ['input', 'print', 'load_test_str', 'dprint', 'print_std', 'sprint']
 
 STD_IN = """"""
 STD_OUT = """"""
@@ -34,7 +34,7 @@ def load_test_str(test_str: str):
         ["Input:", "Output:", "Input:", "Input:", "Output:", "Output:", ]
     )
     # 定义正则表达式
-    pattern = r'^Input:([\s\S]*?)Output:([\s\S]*?)(\Z|(?=Input)|(?=#))'
+    pattern = r'^Input:([\s\S]*?)Output:([\s\S]*?)(\Z|(?=Input)|(?=#)|(?=\n[\u4e00-\u9fa5]))'
     matches = re.findall(pattern, test_str, re.MULTILINE)
     cases = []
     for m in matches:
