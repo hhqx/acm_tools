@@ -91,7 +91,7 @@ def print(*args, **kwargs):
     is_end = len(str_in) == 0
     if exist_case() and is_end:
         load_stdin(pop_new_case())
-    if is_end:
+    if sum(c == '\n' for c in io_std.getvalue()) == sum(c == '\n' for c in std_out[0])+1:
         case_idx += 1
         # print_std(f'Case {case_idx}:')
         STD_OUT = std_out.popleft()
